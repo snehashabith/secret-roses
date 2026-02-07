@@ -75,9 +75,8 @@ p{
     font-style: medium;
     font-style: normal;
     color: #b16e7f;
-    position: absolute;
-    top: 57%;
-    left: 40%;
+    align-items: center;
+    
 
 }
 
