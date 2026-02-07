@@ -31,7 +31,7 @@ function Homepage() {
     return(
         
         <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-            <img src={title} alt="Secret Roses Logo" style={{width: "25vw", height: "300px"}}/>
+            <img src={title} alt="Secret Roses Logo" style={{width: "300px", height: "290px"}}/>
             <button 
             className="btn btn-primary btn-sm mt-3 " 
             onClick={()=> navigate("/submission")}>
