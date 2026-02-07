@@ -8,9 +8,9 @@ body{
         rgba(240, 135, 203, 0.134) 50%,
         rgba(255, 77, 109, 0.1) 100%
         );
-    background-image: url("./components/homebg.png");
+    background-image: url("./components/homebg.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     height:100vh;
     width: 100vw;
     background-repeat: no-repeat;
