@@ -80,11 +80,7 @@ p{
 
 }
 
-img.logo {
-    width: 25vw;
-    height: auto;
-    ;
-}
+
 
 @media (max-width: 600px) {
   .title {
