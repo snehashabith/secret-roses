@@ -30,13 +30,14 @@ function Homepage() {
     return(
         
         <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-            
+            <img src="./components/title_trans.png" alt="Secret Roses Logo" className="mb-4 logo"/>
+            <h2 className="dm-sans-light">Send a rose to the one you adore🌹</h2>
             <button 
             className="btn btn-primary btn-sm mt-3 " 
             onClick={()=> navigate("/submission")}>
                 Get Started 💌
             </button>
-            <p className="mt-4">Time left until Valentine's Day: {timeLeft}</p>
+            <p className="mt-4 justify-content-center">Time left until Valentine's Day: {timeLeft}</p>
         </div>
     );
 }
