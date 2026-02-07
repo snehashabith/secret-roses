@@ -31,7 +31,7 @@ function Homepage() {
     return(
         
         <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-            <img src={title} alt="Secret Roses Logo" className="mb-4 logo"/>
+            <img src={title} alt="Secret Roses Logo" />
             <h2 className="dm-sans-light">Send a rose to the one you adore🌹</h2>
             <button 
             className="btn btn-primary btn-sm mt-3 " 
