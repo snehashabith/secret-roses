@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(
+        135deg,
+        rgba(186, 20, 51, 0.53) 0%,
+        rgba(240, 135, 203, 0.134) 50%,
+        rgba(255, 77, 109, 0.1) 100%
+        );
+    background-image: url("./components/homebg.png");
+    background-position: center;
+    background-size: contain;
+    height:100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.exile-regular {
+  font-family: "Exile", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  color: #b51a3a;
+}
+
+.dm-sans-light {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing : auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #b51a3a
+}
+
+.btn-primary{
+    background-color: #e096a8;
+    border: rgba(181, 26, 58, 0.2);
+    size: 0rch;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 8px 20px;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(181, 26, 58, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 40px;
+    width: max-content;
+    min-width: 160px;
+    height: 50px;
+    
+    position:absolute;
+    top: 49%;
+    left:45%;
+    
+    
+    
+}
+
+.btn-primary:hover{
+    background-color: #ff4d6d;
+    box-shadow: 0 12px 30px rgba(255, 77, 109, 0.4);
+    transform: translateX(-50%  );
+    transform: translateY(-2px);
+
+    }
+
+.btn-primary:active{
+    color: #ef0c39;
+    box-shadow: 0 4px 10px rgba(181, 26, 58, 0.2);
+}
+
+p{
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: medium;
+    font-style: normal;
+    color: #b16e7f;
+    position: absolute;
+    top: 57%;
+    left: 40%;
+
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
