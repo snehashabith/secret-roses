@@ -50,9 +50,7 @@ body{
     min-width: 160px;
     height: 50px;
     
-    position:absolute;
-    top: 49%;
-    left:45%;
+    
     
     
     
@@ -61,7 +59,7 @@ body{
 .btn-primary:hover{
     background-color: #ff4d6d;
     box-shadow: 0 12px 30px rgba(255, 77, 109, 0.4);
-    transform: translateX(-50%  );
+    
     transform: translateY(-2px);
 
     }
