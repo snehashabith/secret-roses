@@ -22,7 +22,7 @@ function Card() {
         
 
         <div className="d-flex flex-column justify-content-center display-contents-center vh-100 text-center align-center">
-            //preview of card
+            
             <div className="card-preview">
             <img src={cards[location.state.cardTemplate]} alt="card" style={{width: "300px", height: "150px"}}/>
             <h2 className="mt-4">
