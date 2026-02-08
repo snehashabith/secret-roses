@@ -1,4 +1,6 @@
 import { useState , useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+import "./Display.css";
 import supabase from "./SupabaseClient"
 import red from "./components/red.png";
 import pink from "./components/pink.png";

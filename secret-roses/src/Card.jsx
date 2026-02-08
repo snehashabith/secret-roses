@@ -7,3 +7,4 @@ function Card(){
         <p>Message: {card?.message}</p>
     </div>
 }
+export default Card;
