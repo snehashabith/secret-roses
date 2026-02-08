@@ -1,4 +1,5 @@
 import "./Submission.css";
+import "./Card.jsx";
 import red from "./components/red.png";
 import pink from "./components/pink.png";
 import beige from "./components/beige.png";

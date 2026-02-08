@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 import {useNavigate } from "react-router-dom";
+import "./Card.css";
+import "./Submission.jsx";
 import red from "./components/red.png";
 import pink from "./components/pink.png";
 import beige from "./components/beige.png";
