@@ -33,7 +33,7 @@ function Card() {
             </div>
             <button className="btn next-btn mt-4"
                 onClick={() => {
-                    navigate("./");
+                    navigate("/");
                 }}
             >
                 Done!

@@ -36,6 +36,24 @@ function Submission() {
             console.log("Data inserted successfully:", data);
         }
 
+        if (cardTemplate === "") {
+            alert("Please select a card template.");
+            return;
+        }
+        if (Recipient.trim() === "" || YearClass.trim() === "" || Message.trim() === "") {
+            alert("Please fill in all the fields.");
+            return;
+        }
+
+        navigate("/card",{
+                        state :{
+                            recipient: Recipient,
+                            yearClass: YearClass,
+                            message: Message,
+                            cardTemplate: cardTemplate
+                        }}
+                    );
+
         //clearing fields after sub
         setRecipient("");
         setYearClass("");
@@ -86,16 +104,7 @@ function Submission() {
                 <textarea className="form-control mb-3 w-50" maxlength="150" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 <button  
                 className="btn next-btn"
-                onClick={() => {
-                    navigate("/card",
-                        state ={
-                            recipient: Recipient,
-                            yearClass: YearClass,
-                            message: Message,
-                            cardTemplate: cardTemplate
-                        }
-                    );
-                }}>
+                type="submit">
                 Send Rose 💌
                 </button>
             </form>
