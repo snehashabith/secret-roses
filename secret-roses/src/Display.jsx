@@ -36,6 +36,7 @@ function Gallery() {
         console.log(cards.length)
         setCards(data);
     }
+}
 
     
 }
@@ -61,6 +62,6 @@ function Gallery() {
             </div>
         </div>
     );
-}   
+  
 
 export default Gallery;
