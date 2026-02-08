@@ -36,22 +36,21 @@ function Gallery() {
         setCards(data);
     }
 
-    const getTemplate=(card)=> {
-        if (!card.card_template) return red;
-        return templates[card.card_template.trim().toLowerCase()];
-    }
+    
 }
     
 
     return(
+        
         <div className="gallery d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+            
             {/*add search bar later */}
             {/*gallery heading as pic - add later */}
             <div className="card-grid" >
                 {cards?.map((card) => (
                     <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
-                        src={getTemplate(card)} 
+                        src={templates[card.card_template?.trim().toLowerCase()] || red} 
                         className="card-img-top" 
                         alt={card.receiver_name}
                         />
