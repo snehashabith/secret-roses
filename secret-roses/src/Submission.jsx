@@ -97,7 +97,8 @@ function Submission() {
                 <textarea className="form-control mb-3 w-50" maxlength="150" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 <button  
                 className="btn next-btn"
-                type="submit">
+                type="submit"
+                onClick={() => alert("Rose sent successfully!")}>
                 Send Rose 💌
                 </button>
             </form>
