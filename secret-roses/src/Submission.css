@@ -28,3 +28,8 @@
     gap: 10px;
     max-width: 300px;
 }
+
+.selected {
+    border: #ff4d6d solid 2px;
+    background-color: transparent;
+}
