@@ -64,13 +64,13 @@ function Submission() {
                 <img src={red} 
                 alt="card" 
                 className={cardTemplate === "red" ? "mb-4 selected" : "mb-4"} 
-                style={{width: "150px", height: "75px"}}
+                style={{width: "200px", height: "100px"}}
                 onClick={() => setCardTemplate("red")}/>
 
                 <img src={pink} 
                 alt="card" 
                 className={cardTemplate === "pink" ? "mb-4 selected" : "mb-4"} 
-                style={{width: "150px", height: "75px"}} 
+                style={{width: "200px", height: "100px"}} 
                 onClick={() => setCardTemplate("pink")}/>
             </div>
 
@@ -79,13 +79,13 @@ function Submission() {
                 <img src={beige} 
                 alt="card" 
                 className={cardTemplate === "beige" ? "mb-4 selected" : "mb-4"} 
-                style={{width: "150px", height: "75px"}} 
+                style={{width: "200px", height: "100px"}} 
                 onClick={() => setCardTemplate("beige")}/>
 
                 <img src={green} 
                 alt="card" 
                 className={cardTemplate === "green" ? "mb-4 selected" : "mb-4"} 
-                style={{width: "150px", height: "75px"}} 
+                style={{width: "200px", height: "100px"}} 
                 onClick={() => setCardTemplate("green")}/>    
 
             </div>
