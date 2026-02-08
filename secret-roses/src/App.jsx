@@ -10,8 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/submission" element={<Submission />} />
-        {/*commenting out route
-        <Route path="/display" element={<Display />} /> */}
+        <Route path="/card" element={<Card />} /> 
       </Routes>
     </Router>
   )

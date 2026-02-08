@@ -4,7 +4,7 @@ import pink from "./components/pink.png";
 import beige from "./components/beige.png";
 import green from "./components/green.png";
 import {useState} from "react";
-//import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom"; 
 import supabase from "./SupabaseClient.jsx";
 
 function Submission() {
@@ -12,6 +12,8 @@ function Submission() {
     const [YearClass, setYearClass] = useState("");
     const [Message, setMessage] = useState("");
     const [cardTemplate,setCardTemplate] = useState("");
+
+    const navigate = useNavigate();
 
     
     const handleSubmit = async (e) => {
@@ -80,13 +82,18 @@ function Submission() {
             onSubmit={handleSubmit}>
                 <input type="text" className="form-control mb-3 w-50" placeholder="Recipient's Name" required value={Recipient} onChange={(e)=>setRecipient(e.target.value)}/>
                 <input type="text" className="form-control mb-3 w-50" placeholder="Year/Class" required value={YearClass} onChange={(e)=>setYearClass(e.target.value)}/>
-                <textarea className="form-control mb-3 w-50" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-                <button 
-                type="submit" 
-                className="btn send-rose-btn"
+                <textarea className="form-control mb-3 w-50" maxlength="150" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                <button  
+                className="btn next-btn"
                 onClick={() => {
-                    alert("Your secret rose has been sent!");
-                    //navigate("/Card");
+                    navigate("/card",
+                        state ={
+                            recipient: Recipient,
+                            yearClass: YearClass,
+                            message: Message,
+                            cardTemplate: cardTemplate
+                        }
+                    );
                 }}>
                 Send Rose 💌
                 </button>

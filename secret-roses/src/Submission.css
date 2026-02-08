@@ -1,4 +1,4 @@
-.send-rose-btn{
+.next-btn{
     background-color: #e096a8;
     border: rgba(181, 26, 58, 0.2);
     size: 0rch;
@@ -15,7 +15,7 @@
     height: 50px;
 }
 
-.send-rose-btn:hover{
+.next-btn:hover{
     background-color: #ff4d6d;
     box-shadow: 0 12px 30px rgba(255, 77, 109, 0.4);
     transform: translateY(-2px);
@@ -24,7 +24,7 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
     gap: 10px;
     max-width: 300px;
     margin: 0 auto;
