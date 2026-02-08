@@ -31,8 +31,8 @@
 }
 
 .selected {
-    border: #ff4d6d solid 2px;
+    border: #ff4d6e9f solid 2px;
     background-color: transparent;
     transform: scale(1.05);
-    box-shadow: #ff4d6d 0px 0px 10px;
+   
 }
