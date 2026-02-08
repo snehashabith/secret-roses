@@ -11,6 +11,13 @@ import green from "./components/green.png";
 
 function Gallery() {
 
+    const templates = {
+        "red": red,
+        "pink": pink,
+        "beige": beige,
+        "green": green
+    };
+
     const [cards, setCards] = useState([]);
     const navigate = useNavigate();
 
@@ -38,7 +45,7 @@ function Gallery() {
                         <img 
                         src={card.card_template} 
                         className="card-img-top" 
-                        alt="card image"
+                        alt={card.receiver_name}
                         />
                         <h5 className="card-title mt-2">{card.receiver_name} - {card.receiver_class}</h5>
                     </div>
