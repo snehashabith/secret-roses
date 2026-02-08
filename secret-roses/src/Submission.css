@@ -24,14 +24,15 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     max-width: 300px;
+    margin: 0 auto;
 }
 
 .selected {
     border: #ff4d6d solid 2px;
     background-color: transparent;
     transform: scale(1.05);
-    box-shadow: #881d31;
+    box-shadow: #ff4d6d 0px 0px 10px;
 }
