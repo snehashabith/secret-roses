@@ -43,7 +43,7 @@ function Gallery() {
                 {cards.map((card) => (
                     <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: {card}})}>
                         <img 
-                        src={card.card_template} 
+                        src={templates[card.card_template]} 
                         className="card-img-top" 
                         alt={card.receiver_name}
                         />
