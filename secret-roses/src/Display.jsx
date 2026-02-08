@@ -35,6 +35,11 @@ function Gallery() {
         console.log("Data fetched successfully:", data);
         setCards(data);
     }
+
+    const getTemplate=(card)=> {
+        if (!card.card_template) return red;
+        return templates[card.card_template.trim().toLowerCase()];
+    }
 }
     
 
@@ -46,7 +51,7 @@ function Gallery() {
                 {cards?.map((card) => (
                     <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
-                        src={templates[card.card_template.trim().toLowerCase()]|| red} 
+                        src={getTemplate(card)} 
                         className="card-img-top" 
                         alt={card.receiver_name}
                         />
