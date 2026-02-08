@@ -38,6 +38,7 @@ function Gallery() {
                         <img 
                         src={card.card_template} 
                         className="card-img-top" 
+                        alt="card image"
                         />
                         <h5 className="card-title mt-2">{card.receiver_name} - {card.receiver_class}</h5>
                     </div>
