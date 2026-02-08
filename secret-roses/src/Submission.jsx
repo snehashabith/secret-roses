@@ -1,12 +1,18 @@
 import "./Submission.css";
-import card from "./components/card.png";
+import red from "./components/red.png";
+import pink from "./components/pink.png";
+import beige from "./components/beige.png";
+import green from "./components/green.png";
 import {useState} from "react";
+//import { useNavigate } from "react-router-dom"; 
 import supabase from "./SupabaseClient.jsx";
 
 function Submission() {
     const [Recipient, setRecipient] = useState("");
     const [YearClass, setYearClass] = useState("");
     const [Message, setMessage] = useState("");
+    const [cardTemplate,setCardTemplate] = useState("");
+
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,7 +21,10 @@ function Submission() {
         .insert([
             {   receiver_name: Recipient,
                 receiver_class: YearClass, 
-                message: Message}
+                message: Message,
+                card_template: cardTemplate
+
+            }
         ]);
 
         if (error) {
@@ -28,22 +37,56 @@ function Submission() {
         setRecipient("");
         setYearClass("");
         setMessage("");
+        setCardTemplate("");
+
+    
 }
     return(
         <div className="d-flex flex-column justify-content-center display-contents-center vh-100 text-center align-center">
-            <div className="d-flex flex-column align-items-center mb-4">
-                <img src={card} alt="card" className="mb-4" style={{width: "400px", height: "300px"}}/>
+            <div className="card-grid d-flex justify-content-center align-items-center mb-4" >
+                <img src={red} 
+                alt="card" 
+                className={cardTemplate === "red" ? "mb-4 selected" : "mb-4"} 
+                style={{width: "100px", height: "100px"}}
+                onClick={() => setCardTemplate("red")}/>
+
+                <img src={pink} 
+                alt="card" 
+                className={cardTemplate === "pink" ? "mb-4 selected" : "mb-4"} 
+                style={{width: "100px", height: "100px"}} 
+                onClick={() => setCardTemplate("pink")}/>
+
+
+                <img src={beige} 
+                alt="card" 
+                className={cardTemplate === "beige" ? "mb-4 selected" : "mb-4"} 
+                style={{width: "100px", height: "100px"}} 
+                onClick={() => setCardTemplate("beige")}/>
+
+                <img src={green} 
+                alt="card" 
+                className={cardTemplate === "green" ? "mb-4 selected" : "mb-4"} 
+                style={{width: "100px", height: "100px"}} 
+                onClick={() => setCardTemplate("green")}/>    
+
             </div>
+
+            
+
 
             <form className="d-flex flex-column align-items-center "
             onSubmit={handleSubmit}>
-                <input type="text" className="form-control mb-3 w-" placeholder="Recipient's Name" required value={Recipient} onChange={(e)=>setRecipient(e.target.value)}/>
+                <input type="text" className="form-control mb-3 w-50" placeholder="Recipient's Name" required value={Recipient} onChange={(e)=>setRecipient(e.target.value)}/>
                 <input type="text" className="form-control mb-3 w-50" placeholder="Year/Class" required value={YearClass} onChange={(e)=>setYearClass(e.target.value)}/>
                 <textarea className="form-control mb-3 w-50" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 <button 
                 type="submit" 
                 className="btn send-rose-btn"
-                >Send Rose 💌
+                onClick={() => {
+                    alert("Your secret rose has been sent!");
+                    //navigate("/Card");
+                }}>
+                Send Rose 💌
                 </button>
             </form>
         </div>
