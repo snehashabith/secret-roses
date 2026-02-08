@@ -48,7 +48,7 @@ function Gallery() {
             {/*gallery heading as pic - add later */}
             <div className="card-grid" >
                 {cards?.map((card) => (
-                    <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: card})}>
+                    <div key={card.id} className="card m-3" style={{width: "100px",height:"55px"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
                         src={templates[card.card_template?.trim().toLowerCase()] || red} 
                         className="card-img-top" 
