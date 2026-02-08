@@ -31,7 +31,10 @@ function Gallery() {
     if (error) {
         console.error("Error fetching data:", error);
     }   
-    else setCards(data);
+    else {
+        console.log("Data fetched successfully:", data);
+        setCards(data);
+    }
 }
     
 
@@ -39,8 +42,8 @@ function Gallery() {
         <div className="gallery d-flex flex-column justify-content-center align-items-center vh-100 text-center">
             {/*add search bar later */}
             {/*gallery heading as pic - add later */}
-            <div className="card-grid d-flex justify-content-center align-items-center mb-4" >
-                {cards.map((card) => (
+            <div className="card-grid" >
+                {cards?.map((card) => (
                     <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
                         src={templates[card.card_template.trim().toLowerCase()]|| red} 
