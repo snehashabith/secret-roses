@@ -43,7 +43,10 @@ function Submission() {
         if (Recipient.trim() === "" || YearClass.trim() === "" || Message.trim() === "") {
             alert("Please fill in all the fields.");
             return;
+        }else{
+            alert("Your secret rose has been sent! 🌹");
         }
+
 
         navigate("/");
 
