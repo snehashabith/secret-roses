@@ -1,4 +1,4 @@
-.card-grid{
+.card-grid-2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
@@ -9,7 +9,7 @@
     height: 100vh;
 }
 
-.card-grid::-webkit-scrollbar {
+.card-grid-2::-webkit-scrollbar {
   height: 8px;
 }
 

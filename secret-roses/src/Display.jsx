@@ -43,7 +43,7 @@ function Gallery() {
             
             {/*add search bar later */}
             {/*gallery heading as pic - add later */}
-            <div className="card-grid" >
+            <div className="card-grid-2" >
                 {cards?.map((card) => (
                     <div key={card.id} className="card m-3" style={{width: "100px",height:"55px"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
