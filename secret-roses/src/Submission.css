@@ -24,7 +24,7 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
     gap: 10px;
     max-width: 300px;
 }
@@ -32,4 +32,6 @@
 .selected {
     border: #ff4d6d solid 2px;
     background-color: transparent;
+    transform: scale(1.05);
+    box-shadow: #881d31;
 }
