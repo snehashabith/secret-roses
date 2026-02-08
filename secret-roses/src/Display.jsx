@@ -24,7 +24,7 @@ function Gallery() {
     useEffect(() => { fetchCards(); }, []);
 
     const fetchCards = async () => {
-    const {data, error} = supabase
+    const {data, error} =await supabase
     .from("cards")
     .select("*");
 
@@ -41,7 +41,7 @@ function Gallery() {
             {/*gallery heading as pic - add later */}
             <div className="card-grid d-flex justify-content-center align-items-center mb-4" >
                 {cards.map((card) => (
-                    <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: {card}})}>
+                    <div key={card.id} className="card m-3" style={{width: "18rem"}} onClick={() => navigate("/card",{state: card})}>
                         <img 
                         src={templates[card.card_template]} 
                         className="card-img-top" 

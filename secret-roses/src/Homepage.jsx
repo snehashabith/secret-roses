@@ -38,7 +38,7 @@ function Homepage() {
                 Get Started 💌
             </button>
             <button
-            className="btn btn-secondary btn-sm mt-3" 
+            className="btn btn-primary btn-sm mt-3" 
             onClick={()=> navigate("/display")}>
                 View Cards 🌹
             </button>
