@@ -37,6 +37,11 @@ function Homepage() {
             onClick={()=> navigate("/submission")}>
                 Get Started 💌
             </button>
+            <button
+            className="btn btn-secondary btn-sm mt-3" 
+            onClick={()=> navigate("/display")}>
+                View Cards 🌹
+            </button>
             <p className="mt-4 justify-content-center">Time left until Valentine's Day: {timeLeft}</p>
         </div>
     );

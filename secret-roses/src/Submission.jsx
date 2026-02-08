@@ -45,14 +45,7 @@ function Submission() {
             return;
         }
 
-        navigate("/card",{
-                        state :{
-                            recipient: Recipient,
-                            yearClass: YearClass,
-                            message: Message,
-                            cardTemplate: cardTemplate
-                        }}
-                    );
+        navigate("/");
 
         //clearing fields after sub
         setRecipient("");

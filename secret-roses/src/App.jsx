@@ -2,7 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from './Homepage';
 import Submission from './Submission';
-import Card from './Card';
+import Display from './Display';
+
 import './App.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/submission" element={<Submission />} />
-        <Route path="/card" element={<Card />} /> 
+        <Route path="/display" element={<Display />} />
+        
       </Routes>
     </Router>
   )
