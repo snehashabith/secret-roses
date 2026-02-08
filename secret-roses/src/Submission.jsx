@@ -98,13 +98,7 @@ function Submission() {
                 <button  
                 className="btn next-btn"
                 type="submit"
-                onClick={() => {
-                    if (cardTemplate === "") {
-                        alert("Please select a card template.");
-                    }else{
-                        handleSubmit();
-                    }
-                }}>
+                onClick={handleSubmit}>
                 Send Rose 💌
                 </button>
             </form>
