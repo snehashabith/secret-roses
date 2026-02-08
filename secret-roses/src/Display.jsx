@@ -33,15 +33,10 @@ function Gallery() {
     }   
     else {
         console.log("Data fetched successfully:", data);
-        console.log(cards.length)
+        console.log(data.length)
         setCards(data);
-    }
-}
-
-    
-}
-    
-
+        }
+    };
     return(
         
         <div className="gallery d-flex flex-column justify-content-center align-items-center vh-100 text-center">
@@ -63,5 +58,5 @@ function Gallery() {
         </div>
     );
   
-
+}
 export default Gallery;
