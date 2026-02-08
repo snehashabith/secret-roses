@@ -4,8 +4,9 @@
     gap: 5px;
     max-width: 300px;
     margin: 0 auto;
-    flex-wrap: wrap;
+    flex:1;
     overflow-y: auto;
+    height: 100vh;
 }
 
 .card-grid::-webkit-scrollbar {

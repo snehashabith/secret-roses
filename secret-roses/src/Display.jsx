@@ -33,6 +33,7 @@ function Gallery() {
     }   
     else {
         console.log("Data fetched successfully:", data);
+        console.log(cards.length)
         setCards(data);
     }
 
