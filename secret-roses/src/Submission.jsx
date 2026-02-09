@@ -1,5 +1,6 @@
 import "./Submission.css";
 import "./Card.jsx";
+import Popup from "./Popup.jsx";
 import red from "./components/red.png";
 import pink from "./components/pink.png";
 import beige from "./components/beige.png";
@@ -12,13 +13,32 @@ function Submission() {
     const [Recipient, setRecipient] = useState("");
     const [YearClass, setYearClass] = useState("");
     const [Message, setMessage] = useState("");
+    const [popupMessage, setPopupMessage] = useState("");
+    const[showPopup, setShowPopup] = useState(false);
     const [cardTemplate,setCardTemplate] = useState("");
+   
 
     const navigate = useNavigate();
+    const closePopup = () => {
+            setShowPopup(false);
+            if (popupMessage === "Your secret rose has been sent! 🌹") {
+            navigate("/");}
+        }
 
     
     const handleSubmit = async (e) => {
         e.preventDefault();
+         if (cardTemplate === "") {
+            setPopupMessage("Please select a card template.");
+            setShowPopup(true);
+            return;
+        }
+        if (Recipient.trim() === "" || YearClass.trim() === "" || Message.trim() === "") {
+            setPopupMessage("Please fill in all the fields.");
+            setShowPopup(true);
+            return;
+        }
+
         const {data, error} = await supabase
         .from("cards")
         .insert([
@@ -32,23 +52,15 @@ function Submission() {
 
         if (error) {
             console.error("Error inserting data:", error);
-        } else {
-            console.log("Data inserted successfully:", data);
-        }
-
-        if (cardTemplate === "") {
-            alert("Please select a card template.");
             return;
-        }
-        if (Recipient.trim() === "" || YearClass.trim() === "" || Message.trim() === "") {
-            alert("Please fill in all the fields.");
-            return;
-        }else{
-            alert("Your secret rose has been sent! 🌹");
-        }
+        } 
+        
+        console.log("Data inserted successfully:", data);
+        setPopupMessage("Your secret rose has been sent! 🌹");
+        setShowPopup(true);
+       
 
-
-        navigate("/");
+        
 
         //clearing fields after sub
         setRecipient("");
@@ -101,10 +113,14 @@ function Submission() {
                 <button  
                 className="btn next-btn"
                 type="submit"
-                onClick={handleSubmit}>
+                >
                 Send Rose 💌
                 </button>
             </form>
+
+            {showPopup && (
+                <Popup message={popupMessage} onClose={closePopup} />
+            )}
         </div>
     );
 }
