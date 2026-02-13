@@ -109,7 +109,7 @@ function Submission() {
             onSubmit={handleSubmit}>
                 <input type="text" className="form-control mb-3 w-50" placeholder="Recipient's Name" required value={Recipient} onChange={(e)=>setRecipient(e.target.value)}/>
                 <input type="text" className="form-control mb-3 w-50" placeholder="Year/Class" required value={YearClass} onChange={(e)=>setYearClass(e.target.value)}/>
-                <textarea className="form-control mb-3 w-50" maxlength="150" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                <textarea className="form-control mb-3 w-50" maxlength="200" placeholder="Your Message" rows="4" required value={Message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                 <button  
                 className="btn next-btn"
                 type="submit"

@@ -1,9 +1,10 @@
 .card-grid-2{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 35px;
     max-width: 300px;
     margin: 0 auto;
+    margin-bottom: 20px;
     flex:1;
     overflow-y: auto;
     height: 100vh;
@@ -13,5 +14,14 @@
   height: 8px;
 }
 
+
+
+.h7{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing : auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #b95e70;
+}
 
 

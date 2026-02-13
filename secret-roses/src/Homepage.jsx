@@ -38,8 +38,8 @@ function Homepage() {
                 Get Started 💌
             </button>
 
-            {/*}
-            </button
+            {/*
+            <button
             className="btn btn-primary btn-sm mt-3" 
             onClick={()=> navigate("/display")}>
                 View Cards 🌹
