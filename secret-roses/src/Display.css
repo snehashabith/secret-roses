@@ -24,4 +24,16 @@
     color: #a12d42;
 }
 
+.form-control {
+    border: 2px solid rgb(208, 173, 179);
+    border-radius: 30px;
+    padding: 7px;
+    font-size: 1rem;
+    
+}
 
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* Subtle glow */
+    border: 1px solid rgba(208, 173, 179, 0.7);
+}
