@@ -29,13 +29,23 @@ function Card(){
     const card = location.state;
     console.log(card);
     return (
-        <div className="body d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-              
-                <img src={selectedTemplate(card?.card_template)} alt="card" style={{width: "350px", height: "200px"}}/>
-                <h2>To: {card?.receiver_name}</h2>
-                <h3>Class: {card?.receiver_class}</h3>
-                <p>Message: {card?.message}</p>
-            
+        <div className="card-page-wrapper">
+            {/* Header info placed above the card */}
+            <div className="card-header-info">
+                <h4 className="to">To: {card?.receiver_name}</h4>
+                <h4 className="class">Class: {card?.receiver_class}</h4>
+            </div>
+
+            <div className="card-container">
+                <img 
+                    src={selectedTemplate(card?.card_template)} 
+                    alt="card" 
+                    className="card-img" 
+                />
+                <div className="content">
+                    <p className="msg">{card?.message}</p>
+                </div>
+            </div>
         </div>
     );
 }

@@ -38,12 +38,12 @@ function Homepage() {
                 Get Started 💌
             </button>
 
-            {/*
+            
             <button
             className="btn btn-primary btn-sm mt-3" 
             onClick={()=> navigate("/display")}>
                 View Cards 🌹
-            </button>*/}
+            </button>
 
             
             <p className="mt-4 justify-content-center">Time left until cards are revealed: {timeLeft}</p>
