@@ -45,8 +45,8 @@ function Homepage() {
                 View Cards 🌹
             </button>
 
-            
-            <p className="mt-4 justify-content-center">Time left until cards are revealed: {timeLeft}</p>
+            {/*
+            <p className="mt-4 justify-content-center">Time left until cards are revealed: {timeLeft}</p>*/}
         </div>
     );
 }
