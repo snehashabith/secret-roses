@@ -54,7 +54,7 @@ function Gallery() {
                         style={{width: "100px", height: "55px"}}
                         onClick={() => navigate("/card",{state: card})}/>
                         
-                        <h5 className="card-title mt-2 mb-5">{card.receiver_name}</h5>
+                        <p className="card-title mt-2 mb-5">{card.receiver_name}</p>
                     </div>
                 ))}
             </div>
